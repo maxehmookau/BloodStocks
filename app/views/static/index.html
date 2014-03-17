@@ -1,0 +1,10 @@
+<div>
+  <h2>Wales</h2>
+  <div id="results"></div>
+</div>
+<script>
+  $.get('records?authority=welshbloodservice', function(res) {
+    console.log(res);
+    $('#results').text(res);
+  });
+</script>
