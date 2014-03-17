@@ -12,4 +12,4 @@ Then add a scraper! (look in `lib/tasks/fetcher.rake`) I've started with the Wel
 
 ## API Docs
 
-These are in progress. Sorry! URLs like this work though: http://openbloodstocks.herokuapp.com/records?authority=wales
+These are in progress. Sorry! URLs like this work though: http://openbloodstocks.herokuapp.com/records?authority=welshbloodservice
