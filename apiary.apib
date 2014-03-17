@@ -1,0 +1,27 @@
+FORMAT: 1A
+HOST: http://openbloodstocks.herokuapp.com
+
+# OpenBloodStocks
+Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+
+# Group Notes
+Notes related resources of the **Blood TYpes API**
+
+## Notes Collection [/blood_types]
+### List all blood types [GET]
++ Response 200 (application/json)
+
+        [{"id":1,"name":"Apos"},{"id":2,"name":"Aneg"},{"id":3,"name":"Bpos"},{"id":4,"name":"Bneg"},{"id":5,"name":"Opos"},{"id":6,"name":"Oneg"},{"id":7,"name":"ABpos"},{"id":8,"name":"ABneg"}]
+
+# Group Records
+Records related resources of the **Records API**
+## Records
+### List all records [GET]
++ Request (application/json)
+
++ Parameters
+    + authority (required, string) ... Name of the blood donation authority
+
++ Response 200 (application/json)
+
+
