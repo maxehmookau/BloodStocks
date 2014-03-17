@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  blood_type_id: 1
+  days_remaining: 1
+  authority: MyString
+
+two:
+  blood_type_id: 1
+  days_remaining: 1
+  authority: MyString

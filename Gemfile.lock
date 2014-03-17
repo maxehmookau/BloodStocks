@@ -50,8 +50,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.9.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     polyglot (0.3.4)
     puma (2.4.0)
       rack (>= 1.1, < 2.0)
@@ -114,6 +117,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  nokogiri
   puma
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)

@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+bloodTypes = ['A', 'B', 'O', 'AB']
+postives = [true, false]
+
+bloodTypes.each do |type|
+  postives.each do |pos|
+    puts "Creating BloodType: #{ type }#{ pos }"
+    BloodType.create(letter: type, positive: pos)
+  end
+end

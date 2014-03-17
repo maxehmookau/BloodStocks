@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Apos:
+  letter: A
+  positive: true
+
+Aneg:
+  letter: A
+  positive: false
