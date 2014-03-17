@@ -16,7 +16,7 @@ namespace :wales do
       blood_type = result[1].match(/([ABO]?B?)(pos|neg)/)
       positive = blood_type[2].eql?('pos')
       blood_type_obj = BloodType.where(letter: blood_type[1], positive: positive).first
-      blood_type_obj.records.create(days_remaining: result[0].to_f, authority: 'welsh_blood_service')
+      blood_type_obj.records.create(days_remaining: result[0].to_f, authority: 'welshbloodservice')
     end
   end
 end
