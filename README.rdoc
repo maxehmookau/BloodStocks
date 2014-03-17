@@ -1,28 +1,15 @@
-== README
+# OpenBloodStocks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The aim of this project is to create a global API for fetching how much blood various blood donation authorities have at any one time. Most of these authorities collect information which they make available on their websites but they do not provide a public API.
 
-Things you may want to cover:
+## How does it work?
 
-* Ruby version
+Each blood donation authority is scraped once daily and the information is placed in to an database with an API attached which anybody can use. This includes historical data as well as current data.
 
-* System dependencies
+## My local blood donation authority isn't included!
 
-* Configuration
+Then add a scraper! (look in `lib/tasks/fetcher.rake`) I've started with the Welsh Blood Service as that is my local one. I'll move on to the rest of the UK and then hopefully worldwide in the future.
 
-* Database creation
+## API Docs
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+These are in progress. Sorry!
