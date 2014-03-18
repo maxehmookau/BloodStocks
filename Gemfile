@@ -26,6 +26,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'puma'
+gem 'angularjs-rails'
 
 group :production do
   gem 'pg'

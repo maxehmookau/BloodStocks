@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+app = angular.module('bloodApp', ['restangular'])
+
+app.controller 'bloodController', ($scope, $http) ->
+  $http.get('records?authority=welshbloodservice').success (data) ->
+    $scope.results = data
+
+  $http.get('blood_types').success (data) ->
+    $scope.bloodTypes = data
+
+  $scope.bloodTypeForID = (id) ->
+    _.find $scope.bloodTypes, (type) ->
+             type.id == id

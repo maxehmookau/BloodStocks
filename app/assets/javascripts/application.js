@@ -10,6 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require angular
+//= require lodash
+//= require restangular
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
