@@ -20,3 +20,17 @@ namespace :wales do
     end
   end
 end
+
+namespace :snbtc do
+  desc "Fetches Scottish Blood Service Data"
+  task fetch: :environment do
+    doc = Nokogiri::HTML(open('http://www.scotblood.co.uk/learn-about-blood/current-blood-stock-levels.aspx'))
+    raw_data = doc.xpath('//*[@id="form1"]/ul/li')
+    raw_data.each do |result|
+      blood = result.attributes['title'].to_s.match(/([ABO]B?)([+-]) blood stocks are currently (\d{1,2}.\d) days./i)
+      positive = blood[2].eql?('+')
+      blood_type = BloodType.where(letter: blood[1], positive: positive).first
+      blood_type.records.create(days_remaining: blood[3].to_f, authority: 'snbtc')
+    end
+  end
+end

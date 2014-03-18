@@ -1,10 +1,21 @@
 <h1>Live Blood Stock Levels <small>Updated at 7:30pm</small></h1>
 <div ng-app="bloodApp">
   <div ng-controller="bloodController">
-    <h2>Welsh Blood Service</h2>
-    <div class="progress" ng-repeat="result in results">
-      <div class="progress-bar" role="progressbar" aria-valuenow="{{result.days_remaining}}" aria-valuemin="0" aria-valuemax="20" style="width: {{result.days_remaining / 20 * 100}}%;">
-        {{(bloodTypeForID(result.blood_type_id)).name}} ({{result.days_remaining}} days)
+    <div ng-controller="walesController">
+      <h2>Welsh Blood Service</h2>
+      <div class="progress" ng-repeat="result in results">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{result.days_remaining}}" aria-valuemin="0" aria-valuemax="30" style="width: {{result.days_remaining / 30 * 100}}%;">
+          {{(bloodTypeForID(result.blood_type_id)).name}} ({{result.days_remaining}} days)
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="scotlandController">
+      <h2>Scottish Blood Service</h2>
+      <div class="progress" ng-repeat="result in results">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{result.days_remaining}}" aria-valuemin="0" aria-valuemax="30" style="width: {{result.days_remaining / 30 * 100}}%;">
+          {{(bloodTypeForID(result.blood_type_id)).name}} ({{result.days_remaining}} days)
+        </div>
       </div>
     </div>
   </div>
